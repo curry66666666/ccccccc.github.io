@@ -5,10 +5,10 @@ body {
     padding: 0;
     background-color: #f4f4f4; /* 浅灰色背景 */
     color: #333; /* 深色文字 */
-  }
-  
-  /* 导航栏样式 */
-  .navbar {
+}
+
+/* 导航栏样式 */
+.navbar {
     background-color: #333; /* 深色背景 */
     color: white;
     padding: 10px 0;
@@ -19,38 +19,40 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-  }
-  
-  .navbar ul li {
-    margin: 0 20px;
-  }
-  
-  .navbar ul li a {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
-  }
-  
-  .navbar ul li a i {
+}
+
+.navbar ul li a i {
     margin-right: 5px;
-  }
-  
-  .navbar ul li a:hover {
+}
+
+.navbar ul li a:hover {
     color: #5081d6;
     transform: translateY(-2px);
-  }
-  
-  /* 轮播图样式 */
-  .carousel {
+}
+
+/* 轮播图样式 */
+.carousel {
     position: relative;
     width: 100%;
     height: 400px;
@@ -58,61 +60,57 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 60px; /* 留出导航栏空间 */
-  }
-  
-  /* 热门测评手机列表样式 */
-  .hot-phones-section {
+}
+
+/* 热门测评手机列表样式 */
+.hot-phones-section {
     margin-top: 20px;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
-  }
-  
-  .phone-card-container {
+}
+
+.phone-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .phone-card {
+}
+
+.phone-card {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 320px;
+    width: calc(33.333% - 20px);
     border-radius: 10px;
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease;
-  }
-  
-  .phone-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .phone-card-img {
+}
+
+.phone-card-img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-  }
-  
-  .phone-card-title {
+}
+
+.phone-card-title {
     margin: 15px 0;
     font-size: 20px;
     color: #333;
-  }
-  
-  .phone-card-description {
+}
+
+.phone-card-description {
     margin: 0;
     color: #666;
     font-size: 16px;
-  }
-  
-  .phone-card-link {
+}
+
+.phone-card-link {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -121,207 +119,135 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  .phone-card-link:hover {
+}
+
+.phone-card-link:hover {
     background-color: #4598cd;
-  }
-  
+}
+
 /* 排行榜样式 */
 .ranking-row {
     display: flex;
-    flex-wrap: wrap; /* 允许元素换行 */
-    justify-content: space-between; /* 元素之间的间距平均分布 */
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  .ranking-col {
-    flex: 1; /* 让所有的列元素都有相同的flex基础值 */
+}
+
+.ranking-col {
+    flex: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px; /* 每个列底部添加间距 */
+    margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .ranking-col:hover {
+}
+
+.ranking-col:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .ranking-title {
+}
+
+.ranking-title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
     color: #1f2022;
     text-transform: uppercase;
-  }
-  
-  .ranking-list {
+}
+
+.ranking-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .ranking-list li {
+}
+
+.ranking-list li {
     margin-bottom: 10px;
     font-size: 16px;
     color: #666;
-  }
-  
-  .phone-link {
+}
+
+.phone-link {
     color: #60afd1;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .phone-link:hover {
+}
+
+.phone-link:hover {
     color: #457dd1;
-  }
-  
-  /* 第一排三个元素 */
-  .ranking-col:nth-child(-n+3) {
-    flex-basis: calc(30% - 20px); /* 设置宽度为容器的33%减去间距 */
-  }
-  
-  /* 第二排两个元素 */
-  .ranking-col:nth-child(n+4) {
-    flex-basis: calc(49% - 20px); /* 设置宽度为容器的50%减去间距 */
-    margin-top: 20px; /* 与上一排元素间距 */
-  }
-  
-  /* 确保第二排两个元素在第一排三个元素下面 */
-  .ranking-row::after {
-    content: '';
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* 与上一排元素间距 */
-  }
-  
-  /* 适应屏幕宽度变化 */
-  @media (max-width: 768px) {
-    .ranking-col:nth-child(-n+3) {
-      flex-basis: 100%; /* 在较小屏幕上，改为单列布局 */
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .phone-card {
+        width: calc(50% - 20px);
     }
-    .ranking-col:nth-child(n+4) {
-      flex-basis: 100%; /* 在较小屏幕上，改为单列布局 */
+}
+
+@media (max-width: 768px) {
+    .phone-card {
+        width: 100%;
     }
-  }
-  
-  
-  /* 第二排两个元素居中 */
-  .ranking-row::after {
-    content: '';
-    width: 100%; /* 确保第二排占据整行宽度 */
-    max-width: calc(66% - 20px); /* 减去间距 */
-    flex: 1;
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    margin-top: 20px; /* 与上一排元素间距 */
-  }
-  
-  /* 确保每行只显示三个列元素 */
-  @media (max-width: 1200px) {
-    .ranking-col {
-      max-width: calc(50% - 20px); /* 在较小屏幕上，改为两列布局 */
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .ranking-col {
-      max-width: 100%; /* 在更小的屏幕上，改为单列布局 */
-      margin-right: 0;
+
+    .navbar ul li {
+        margin: 10px 0;
     }
-  }
-  
-  /* 确保每行只显示三个列元素 */
-  @media (max-width: 1200px) {
-    .ranking-col {
-      min-width: calc(50% - 20px); /* 在较小屏幕上，改为两列布局 */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .ranking-col {
-      min-width: 100%; /* 在更小的屏幕上，改为单列布局 */
-      margin-right: 0;
-    }
-  }
-  
-  
-  /* 确保每行只显示三个列元素 */
-  @media (max-width: 1200px) {
-    .ranking-col {
-      flex-basis: calc(50% - 20px); /* 在较小屏幕上，改为两列布局 */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .ranking-col {
-      flex-basis: 100%; /* 在更小的屏幕上，改为单列布局 */
-      margin-right: 0;
-    }
-  }
-  
-  /* 为active类的图片添加样式 */
-  .carousel-image.active {
-    opacity: 1;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+}
+
 /* 热点资讯样式 */
 .hot-news-section {
     margin-top: 20px;
     text-align: center;
-    padding-bottom: 20px; /* 确保与底部有一定间距 */
-    border-bottom: 1px solid #ccc; /* 底部边框线 */
-  }
-  
-  .hot-news-list {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.hot-news-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-  
-  .hot-news-list li {
-    width: 100%; /* 每个项目独占一行 */
-    margin-bottom: 20px; /* 间距 */
+}
+
+.hot-news-list li {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     border-radius: 10px;
-    padding:40px 20px;
+    padding: 40px 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .hot-news-list li:hover {
+}
+
+.hot-news-list li:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .hot-news-link {
+}
+
+.hot-news-link {
     color: #83bafa;
     text-decoration: none;
     font-size: 25px;
     transition: color 0.3s ease;
-    display: block; /* 使链接填满容器宽度 */
-  }
-  
-  .hot-news-link:hover {
+    display: block;
+}
+
+.hot-news-link:hover {
     color: #0000ff;
-  }
-  
-  
+}
+
+@media (max-width: 768px) {
+    .hot-news-list li {
+        width: 100%;
+    }
+}
